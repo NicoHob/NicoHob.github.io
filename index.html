@@ -51,10 +51,10 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 /* hero */
 .hero{padding:88px 0 64px}
 .eyebrow{display:inline-block;font-size:.8rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:99px;margin-bottom:18px}
-.name-row{display:flex;align-items:center;gap:24px;margin-bottom:18px}
-.avatar{width:120px;height:120px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);box-shadow:0 0 0 2px var(--accent),var(--shadow);flex-shrink:0}
-.hero h1{font-size:clamp(2.2rem,6vw,3.8rem)}
-@media (max-width:520px){.name-row{gap:16px}.avatar{width:84px;height:84px}}
+.hero-grid{display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);margin-bottom:14px}
+.portrait{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:32px}.portrait{order:-1;max-width:240px}}
 .hero p.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin-bottom:28px}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid var(--line);background:var(--surface);color:var(--text)}
@@ -159,12 +159,10 @@ html[lang="en"] [data-en]{display:revert}
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
     <span class="eyebrow"><span data-es>Estudiante de Licenciatura en Sistemas · Universidad ORT Uruguay</span><span data-en>Information Systems Student · Universidad ORT Uruguay</span></span>
-    <div class="name-row">
-      <img class="avatar" src="img/profile.jpg" alt="Foto de Nicolas Hobbins" width="120" height="120">
-      <h1>Nicolas Hobbins</h1>
-    </div>
+    <h1>Nicolas Hobbins</h1>
     <p class="lead">
       <span data-es>Desarrollo software con C#, .NET, Java y SQL. Me interesan la arquitectura de software, las buenas prácticas y la tecnología aplicada a problemas reales.</span>
       <span data-en>I build software with C#, .NET, Java and SQL. I'm interested in software architecture, good engineering practices and applying technology to real problems.</span>
@@ -184,6 +182,8 @@ html[lang="en"] [data-en]{display:revert}
       </a>
       <a class="btn" href="#projects"><span data-es>Ver proyectos</span><span data-en>See projects</span> →</a>
     </div>
+    </div>
+    <img class="portrait" src="img/profile.jpg" alt="Foto de Nicolas Hobbins" width="480" height="480">
   </div>
 </header>
 
