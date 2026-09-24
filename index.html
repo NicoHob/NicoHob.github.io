@@ -92,9 +92,18 @@ section h2{font-size:1.8rem;margin-bottom:8px}
 
 /* experience */
 .timeline{display:grid;gap:14px}
-.job{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.job h3{font-size:1.1rem}
-.job span{color:var(--muted);font-size:.92rem}
+.job{display:flex;flex-direction:column;gap:10px}
+.job-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.job h3{font-size:1.12rem}
+.company{color:var(--accent);font-weight:500;font-size:.95rem}
+.date{font-size:.85rem;color:var(--muted);background:var(--chip);padding:3px 10px;border-radius:99px;white-space:nowrap}
+.job p{color:var(--muted);font-size:.95rem}
+.fact .note{font-weight:500;color:var(--muted);font-size:.88rem;margin-top:2px}
+.achievements{margin-bottom:24px}
+.ach{display:flex;gap:14px;align-items:flex-start}
+.ach-icon{font-size:1.6rem;line-height:1}
+.ach h3{font-size:1.05rem;margin-bottom:4px}
+.ach p{color:var(--muted);font-size:.93rem}
 
 /* huawei */
 .hw-list{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 24px}
@@ -151,7 +160,7 @@ html[lang="en"] [data-en]{display:revert}
 
 <header class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow"><span data-es>Estudiante de Licenciatura en Sistemas</span><span data-en>Information Systems Student</span></span>
+    <span class="eyebrow"><span data-es>Estudiante de Licenciatura en Sistemas · Universidad ORT Uruguay</span><span data-en>Information Systems Student · Universidad ORT Uruguay</span></span>
     <div class="name-row">
       <img class="avatar" src="img/profile.jpg" alt="Foto de Nicolas Hobbins" width="120" height="120">
       <h1>Nicolas Hobbins</h1>
@@ -169,6 +178,10 @@ html[lang="en"] [data-en]{display:revert}
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.5H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg>
         LinkedIn
       </a>
+      <a class="btn" href="mailto:hobbinsnicolas@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        Email
+      </a>
       <a class="btn" href="#projects"><span data-es>Ver proyectos</span><span data-en>See projects</span> →</a>
     </div>
   </div>
@@ -178,11 +191,11 @@ html[lang="en"] [data-en]{display:revert}
   <div class="wrap">
     <h2><span data-es>Sobre mí</span><span data-en>About me</span></h2>
     <p class="sub">
-      <span data-es>Estudio Licenciatura en Sistemas. Vengo del mundo de las telecomunicaciones y la atención al cliente, lo que me dio una mirada práctica sobre cómo la tecnología impacta en las personas. Fuera de la pantalla, me vas a encontrar en una cancha de fútbol o arriba de una tabla de snowboard.</span>
-      <span data-en>I'm studying Information Systems. I come from telecommunications and customer service, which gave me a practical view of how technology affects people. Away from the screen, you'll find me on a football pitch or on a snowboard.</span>
+      <span data-es>Estudio Licenciatura en Sistemas en la Universidad ORT Uruguay. Tengo experiencia en análisis de datos, soporte IT y un intercambio cultural en Estados Unidos, lo que me dio una mirada práctica sobre cómo la tecnología impacta en las personas. Fuera de la pantalla, me vas a encontrar en una cancha de fútbol o arriba de una tabla de snowboard.</span>
+      <span data-en>I'm studying Information Systems at Universidad ORT Uruguay. I have experience in data analysis, IT support and a cultural exchange in the United States, which gave me a practical view of how technology affects people. Away from the screen, you'll find me on a football pitch or on a snowboard.</span>
     </p>
     <div class="facts">
-      <div class="card fact"><div class="k"><span data-es>Estudios</span><span data-en>Education</span></div><div class="v"><span data-es>Licenciatura en Sistemas</span><span data-en>B.Sc. in Information Systems</span></div></div>
+      <div class="card fact"><div class="k"><span data-es>Estudios</span><span data-en>Education</span></div><div class="v"><span data-es>Licenciatura en Sistemas</span><span data-en>B.Sc. in Information Systems</span><div class="note">Universidad ORT Uruguay</div></div></div>
       <div class="card fact"><div class="k"><span data-es>Inglés</span><span data-en>English</span></div><div class="v"><span data-es>C2 — Michigan Proficiency (ECPE)</span><span data-en>C2 — Michigan Proficiency (ECPE)</span></div></div>
       <div class="card fact"><div class="k"><span data-es>Certificaciones</span><span data-en>Certifications</span></div><div class="v">Huawei — AI · 5G · Cloud</div></div>
     </div>
@@ -201,7 +214,10 @@ html[lang="en"] [data-en]{display:revert}
       <span class="skill">JavaScript</span>
       <span class="skill">SQL</span>
       <span class="skill">Haskell</span>
+      <span class="skill">C/C++</span>
       <span class="skill">Git</span>
+      <span class="skill">Docker</span>
+      <span class="skill">Bash Scripting</span>
     </div>
   </div>
 </section>
@@ -248,10 +264,31 @@ html[lang="en"] [data-en]{display:revert}
 <section id="experience">
   <div class="wrap">
     <h2><span data-es>Experiencia laboral</span><span data-en>Work experience</span></h2>
-    <p class="sub"><span data-es>Experiencia en telecomunicaciones y atención al cliente.</span><span data-en>Experience in telecommunications and customer service.</span></p>
+    <p class="sub"><span data-es>Análisis de datos, soporte IT y experiencia internacional.</span><span data-en>Data analysis, IT support and international experience.</span></p>
     <div class="timeline">
-      <div class="card job"><h3>Movistar</h3><span><span data-es>Telecomunicaciones</span><span data-en>Telecommunications</span></span></div>
-      <div class="card job"><h3>Teleservicios</h3><span><span data-es>Call center · Atención al cliente</span><span data-en>Call center · Customer service</span></span></div>
+      <article class="card job">
+        <div class="job-head">
+          <div><h3>Host</h3><div class="company">Red River Brewing Company · <span data-es>EE.UU.</span><span data-en>USA</span></div></div>
+          <span class="date">12/2025 – 03/2026</span>
+        </div>
+        <p><span data-es>Intercambio cultural en Estados Unidos. Trabajé como Host en un restaurante, donde mejoré mucho mis habilidades comunicacionales y mi nivel de inglés.</span><span data-en>Cultural exchange in the United States. I worked as a Host at a restaurant, which greatly improved my communication skills and my English.</span></p>
+      </article>
+      <article class="card job">
+        <div class="job-head">
+          <div><h3><span data-es>Soporte IT</span><span data-en>IT Support</span></h3><div class="company">Teleservicios</div></div>
+          <span class="date">06/2025 – 12/2025</span>
+        </div>
+        <p><span data-es>Encargado de brindar soporte a todos los sectores de la empresa en hardware, software, redes, infraestructura, gestión de permisos y manejo de CRM.</span><span data-en>Provided support to every department of the company across hardware, software, networking, infrastructure, permission management and CRM administration.</span></p>
+        <div class="chips"><span class="chip">Hardware</span><span class="chip"><span data-es>Redes</span><span data-en>Networking</span></span><span class="chip"><span data-es>Infraestructura</span><span data-en>Infrastructure</span></span><span class="chip">CRM</span></div>
+      </article>
+      <article class="card job">
+        <div class="job-head">
+          <div><h3>Data Analyst</h3><div class="company">Movistar · <span data-es>Pasantía</span><span data-en>Internship</span></div></div>
+          <span class="date">06/2023 – 10/2023</span>
+        </div>
+        <p><span data-es>Participé en un programa de pasantías, encargado de realizar informes para el sector de Marketing.</span><span data-en>Took part in an internship program, building reports for the Marketing department.</span></p>
+        <div class="chips"><span class="chip">QlikView</span><span class="chip">Qlik Sense</span><span class="chip">Qlik NPrinting</span><span class="chip">SQL</span></div>
+      </article>
     </div>
   </div>
 </section>
@@ -260,13 +297,24 @@ html[lang="en"] [data-en]{display:revert}
   <div class="wrap">
     <h2>Huawei — Seeds for the Future</h2>
     <p class="sub">
-      <span data-es>Participé en el programa Seeds for the Future de Huawei, donde completé cursos certificados de Inteligencia Artificial, 5G y Cloud, y trabajé en equipo en un proyecto tecnológico que presentamos ante el público del evento.</span>
-      <span data-en>I took part in Huawei's Seeds for the Future program, where I completed certified courses in Artificial Intelligence, 5G and Cloud, and worked in a team on a tech project that we presented on stage.</span>
+      <span data-es>Participé en el programa Seeds for the Future de Huawei, donde me certifiqué en Inteligencia Artificial, Cloud y 5G, y luego representé a Uruguay en la competencia regional Tech4Good desarrollando un proyecto tecnológico en equipo.</span>
+      <span data-en>I took part in Huawei's Seeds for the Future program, where I got certified in Artificial Intelligence, Cloud and 5G, and then represented Uruguay at the Tech4Good regional competition, building a tech project as a team.</span>
     </p>
-    <div class="hw-list">
-      <span class="skill"><span data-es>Inteligencia Artificial</span><span data-en>Artificial Intelligence</span></span>
-      <span class="skill">5G</span>
-      <span class="skill">Cloud Computing</span>
+    <div class="grid g2 achievements">
+      <div class="card ach">
+        <div class="ach-icon">🎓</div>
+        <div>
+          <h3><span data-es>Certificado en IA, Cloud y 5G</span><span data-en>Certified in AI, Cloud and 5G</span></h3>
+          <p><span data-es>Obtenido al participar del programa Seeds for the Future de Huawei.</span><span data-en>Earned through Huawei's Seeds for the Future program.</span></p>
+        </div>
+      </div>
+      <div class="card ach">
+        <div class="ach-icon">🇺🇾</div>
+        <div>
+          <h3><span data-es>Seleccionado de Uruguay — Tech4Good</span><span data-en>Team Uruguay — Tech4Good</span></h3>
+          <p><span data-es>Formé parte del seleccionado de Uruguay en la competencia regional Tech4Good, llevada a cabo en El Salvador.</span><span data-en>Selected to represent Uruguay at the Tech4Good regional competition held in El Salvador.</span></p>
+        </div>
+      </div>
     </div>
     <div class="gallery">
       <img class="big" src="img/huawei-stage.jpg" alt="Presentación en el escenario de Huawei" loading="lazy">
@@ -307,7 +355,7 @@ html[lang="en"] [data-en]{display:revert}
 <footer>
   <div class="wrap">
     <span>© <span id="year"></span> Nicolas Hobbins</span>
-    <span><a href="https://github.com/NicoHob" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/nicolashobbins/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <span><a href="mailto:hobbinsnicolas@gmail.com">hobbinsnicolas@gmail.com</a> · <a href="https://github.com/NicoHob" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/nicolashobbins/" target="_blank" rel="noopener">LinkedIn</a></span>
   </div>
 </footer>
 
